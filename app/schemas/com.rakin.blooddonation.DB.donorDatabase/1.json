@@ -1,0 +1,82 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "8f9900eec58e6527ca38f18bfef93e0c",
+    "entities": [
+      {
+        "tableName": "donor_list",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`donor_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `d_name` TEXT, `d_age` TEXT, `d_phone` TEXT, `d_area` TEXT, `d_city` TEXT, `d_email` TEXT, `d_pass` TEXT, `d_bloodgrp` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "donor_id",
+            "columnName": "donor_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "donor_name",
+            "columnName": "d_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "age",
+            "columnName": "d_age",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "phone",
+            "columnName": "d_phone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "area",
+            "columnName": "d_area",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "d_city",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "d_email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "password",
+            "columnName": "d_pass",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "blood_grp",
+            "columnName": "d_bloodgrp",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "donor_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8f9900eec58e6527ca38f18bfef93e0c')"
+    ]
+  }
+}

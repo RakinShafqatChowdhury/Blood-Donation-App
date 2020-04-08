@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Emergency" >
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="EMERGENCY HELP"
+        android:textColor="#D61212"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/bloodgrpSP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/em_addET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/em_phoneET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Phone number"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/regBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#E20B0B"
+        android:gravity="center"
+        android:onClick="emergency_request"
+        android:text="Send Emergency Request"
+        android:textColor="#F5FFFFFF"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/nearbyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_weight=".2"
+            android:backgroundTint="#E20B0B"
+            android:text="List of Blood Banks"
+            android:textColor="#F5FFFFFF" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/bloodbankID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:shrinkColumns="1,0">
+
+        <TableRow android:background="#51494545">
+
+            <TextView
+                android:background="#51494545"
+                android:padding="5dp"
+                android:text="Name"
+                android:textColor="#B80606"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:background="#51494545"
+                android:padding="5dp"
+                android:text="Address"
+                android:textColor="#B80606"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:background="#51494545"
+                android:padding="5dp"
+                android:text="Phone"
+                android:textColor="#B80606"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+
+            </TextView>
+        </TableRow>
+
+        <TableRow android:background="#51494545">
+
+            <TextView
+                android:padding="5dp"
+                android:text="Being Human Blood Bank"
+                android:textColor="#B80606"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/bbaddID"
+                android:clickable="true"
+                android:onClick="bbaddress"
+                android:padding="5dp"
+                android:text="12/1 kawran Bazar"
+                android:textColor="#B80606"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/bbphnID"
+                android:clickable="true"
+                android:onClick="bbphone"
+                android:padding="5dp"
+                android:text="01589653249"
+                android:textColor="#B80606"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+        </TableRow>
+
+        <TableRow android:background="#51494545">
+
+            <TextView
+                android:padding="5dp"
+                android:text="Trust Blood bank"
+                android:textColor="#B80606"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/bbaddID1"
+                android:clickable="true"
+                android:onClick="bbaddress"
+                android:padding="5dp"
+                android:text="8/1 Dhanmondi"
+                android:textColor="#B80606"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/bbphnID1"
+                android:clickable="true"
+                android:onClick="bbphone"
+                android:padding="5dp"
+                android:text="01915689473"
+                android:textColor="#B80606"
+                android:textSize="16dp"
+                android:textStyle="bold">
+
+            </TextView>
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>
